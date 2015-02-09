@@ -60,7 +60,7 @@ if (typeof Int32Array !== 'undefined')
 
 function bufferizeInt(num) {
   var tmp = Buffer(4);
-  tmp.writeInt32BE(num, 0);
+  tmp.writeInt32LE(num, 0);
   return tmp;
 }
 
