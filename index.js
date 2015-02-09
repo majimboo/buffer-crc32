@@ -69,7 +69,7 @@ function _crc32(buf, previous) {
     buf = Buffer(buf);
   }
   if (Buffer.isBuffer(previous)) {
-    previous = previous.readUInt32BE(0);
+    previous = previous.readUInt32LE(0);
   }
   var crc = ~~previous ^ -1;
   for (var n = 0; n < buf.length; n++) {
